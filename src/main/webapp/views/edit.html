@@ -1,0 +1,97 @@
+
+<div id="wrapper">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Clinica medicala Hilmi</a>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="index.html"><i class="fa fa-hospital-o fa-fw"></i>Programari efectuate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Clinica medicala Hilmi</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-users fa-fw"></i> Editare programare
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div>
+                            <span>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>First name:</label>
+                                        <input class="form-control" size="20" ng-model="person.firstName" />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label>Last name:</label>
+                                        <input class="form-control" size="20" ng-model="person.lastName" />
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <label>Selectati medicul programarii  </label>
+                                    <select class="form-control" ng-model="person.doctor" ng-options="doctor as formatDoctor(doctor) for doctor in doctors">
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Date: </label>
+                                        <input class="form-control" ui-date="dateOptions" name="Date" ng-model="person.appointmentDate" size="20"/>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label path="appointmentHour">Hour:</label>
+                                        <input class="form-control" ng-model="person.appointmentHour" size="20"/>
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="submit" class="btn btn-primary" value="Create" ng-click="editAppointment(person)"/>
+                                </div>
+                            </span>
+                        </div>
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+
+</div>
+</body>
+</html>
