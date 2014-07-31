@@ -32,9 +32,6 @@ function ($scope, DoctorsService, $location, PersonsService, $routeParams) {
     console.log('controller');
 
     $scope.dateOptions = {
-        changeYear: true,
-        changeMonth: true,
-        changeDay: true,
         yearRange: '1900:-0'
     };
 
