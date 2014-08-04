@@ -3,15 +3,12 @@ app.controller('ClinicaController', [
 '$scope', 'DoctorsService', '$location', 'PersonsService', '$routeParams',
 function ($scope, DoctorsService, $location, PersonsService, $routeParams) {
 
-    var uniqueId = 0;
-
     $scope.persons = PersonsService.list;
     $scope.doctors = DoctorsService;
 
     $scope.person = PersonsService.getPersonById($routeParams.id);
 
     $scope.createAppointment = function (person) {
-        person.id = uniqueId++;
         PersonsService.add(person);
         $location.path('list');
     }

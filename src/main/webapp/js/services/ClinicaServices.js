@@ -18,8 +18,10 @@ var doctorsFn = function () {
 
 var personsFn = function () {
     this.list = [];
+	var uniqueId = 0;
 
     this.add = function (person) {
+		person.id = uniqueId++;
         this.list.push(person);
     }
 
